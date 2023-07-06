@@ -3,6 +3,8 @@ import axios from 'axios';
 import "./App.css";
 import NasaPhoto from './Components/NasaPhoto';
 
+
+
 function App() {
   const [data, setData] = useState();
 
@@ -14,7 +16,7 @@ useEffect(() => {
    })
     .catch(err => console.error(err))
   }, [])
-  
+
   return (
     <div className="App">
       {data && <NasaPhoto photo={data} />}

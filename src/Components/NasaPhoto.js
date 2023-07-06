@@ -1,13 +1,23 @@
 import React from 'react';
+import styled from 'styled-components'
 
+const TextH3 = styled.h3`
+color: blue;
+`;
+const BackDiv = styled.div`
+background-color: black
+`;
+const ColorP = styled.p`
+color: white
+`;
 const NasaPhoto = (props) => {
     return (
-        <div className ="nasa-photo-wrapper">
-            <h3>{props.photo.title}</h3>
+        <BackDiv className ="nasa-photo-wrapper">
+            <TextH3>{props.photo.title}</TextH3>
             <p>{props.photo.date}</p>
             <img src={props.photo.hdurl} />
-            <p className = "explanation">{props.photo.explanation} </p>
-        </div>
+            <ColorP className = "explanation">{props.photo.explanation} </ColorP>
+        </BackDiv>
     )
 }
 
